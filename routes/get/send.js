@@ -2,11 +2,11 @@
 
 var fs = require('fs');
 var path = require('path');
-var config = require('../../../mail');
 var mandrill = require('mandrill-api/mandrill');
-var mandrill_client = new mandrill.Mandrill(config.mail.mandrill_api_key);
 
 var route = function route(req, res, next, abe) {
+  var config = require(abe.config.root + '/mail/index.json');
+  var mandrill_client = new mandrill.Mandrill(config.mail.mandrill_api_key);
   abe.abeExtend.hooks.instance.trigger('beforeRoute', req, res, next);
   if(typeof res._header !== 'undefined' && res._header !== null) return;
   fs.readFile(abe.config.root + config.mail.template, 'utf8', function read(err, data) {

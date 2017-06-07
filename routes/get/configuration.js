@@ -2,9 +2,10 @@
 
 var fs = require('fs');
 var path = require('path');
-var config = require('../../../mail');
 
 var route = function route(req, res, next, abe) {
+
+  var config = require(abe.config.root + '/mail/index.json');
 
   if(req.query.recipient != null){
     config.mail.recipient = req.query.recipient

@@ -1,9 +1,10 @@
 'use strict';
 
 var request = require("request");
-var config = require('../../../mail');
 
 var route = function route(req, res, next, abe) {
+  var config = require(abe.config.root + '/mail/index.json');
+  
   abe.abeExtend.hooks.instance.trigger('beforeRoute', req, res, next);
   if(typeof res._header !== 'undefined' && res._header !== null) return;
   
