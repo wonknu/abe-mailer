@@ -1,5 +1,5 @@
 {
-  "name": "abe-mail",
+  "name": "abe-mailer",
   "version": "1.0.0",
   "description": "abe plugin to send mail",
   "dependencies": {
@@ -10,7 +10,7 @@
 
   },
   "scripts": {
-    "postinstall" : "cp custom ../../"
+    
   },
   "repository": {
     "type": "git",
