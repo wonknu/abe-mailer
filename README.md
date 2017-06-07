@@ -42,7 +42,7 @@ Click on it and you will be able to edit you mail config directly from abems edi
 
 ![Tab config](doc-image/doc-1.png)
 
-or open mail/index.json
+or open mail/index.json and edit it
 
 
 ```
@@ -56,31 +56,13 @@ or open mail/index.json
 		"secret": "YOUR_RECAPTCHA_SECRET"
 	}
 }
-
-
-####5) open mail/config/index.json
-
-```
-{
-	"mail": {
-		"recipient": "fabrice.labbe@adfab.fr",
-		"template": "/scripts/mail/template-mail/contact.html",
-		"subject": "this is subject"
-	},
-	"captcha": {
-		"secret": "YOUR_RECAPTCHA_SECRET"
-	}
-}
-```
-
-Change recipient with emails to send the contact mail (separated with ",")
 
 
 ##Example form
 
 On your Abe template you will need to have a form element like this :
 
-```
+```html
 <form id="gform" action="#" method="POST">
   <input type="text" name="name" required>
   <input type="text" name="country" required>
@@ -101,7 +83,7 @@ Note the ID #gform (form tag) and the class .btn-mail (button submit tab)
 
 open mail/contact.html
 
-```
+```html
 <table>
 	<tr>
 		<td>
