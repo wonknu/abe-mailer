@@ -10,7 +10,7 @@
 
   },
   "scripts": {
-    "postinstall" : "mkdir custom && cp ./node_modules/abe-mailer/custom/menu-addons.html custom"
+    "postinstall" : "pwd"
   },
   "repository": {
     "type": "git",
