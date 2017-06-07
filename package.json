@@ -1,7 +1,7 @@
 {
   "name": "abe-mail",
   "version": "1.0.0",
-  "description": "",
+  "description": "abe plugin to send mail",
   "dependencies": {
     "mandrill-api": "1.0.45",
     "request": "^2.81.0"
@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wonknu/abe-mail.git"
+    "url": "git+https://github.com/wonknu/abe-mailer.git"
   },
   "author": "wonknu",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wonknu/abe-mail"
+    "url": "https://github.com/wonknu/abe-mailer/issues"
   },
-  "homepage": "https://github.com/wonknu/abe-mail#readme"
+  "homepage": "https://github.com/wonknu/abe-mailer#readme"
 }
