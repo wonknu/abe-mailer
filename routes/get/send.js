@@ -17,7 +17,7 @@ var route = function route(req, res, next, abe) {
       html: result,
       subject: config.mail.subject,
       from_email: config.mail.from,
-      from_name: 'Noreply Abecms',
+      from_name: config.mail.from_name,
       to: [{
         email: config.mail.recipient
       }]

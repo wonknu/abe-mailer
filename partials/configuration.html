@@ -83,6 +83,10 @@
                     <div class="label-input">From email</div>
                     <input type="email" name="from" id="from" value="{{configMail.mail.from}}" class="form-control form-edit">
                   </div>
+                  <div class="input-group">
+                    <div class="label-input">From name</div>
+                    <input type="email" name="from" id="from" value="{{configMail.mail.from_name}}" class="form-control form-edit">
+                  </div>
 	                <div class="input-group">
                 		<div class="label-input">Recipient</div>
                   	<input type="email" name="recipient" id="recipient" value="{{configMail.mail.recipient}}" class="form-control form-edit">
@@ -124,6 +128,7 @@
 	<script>
 		var btn = document.getElementById('save');
     var _from = document.getElementById('from');
+    var from_name = document.getElementById('from_name');
 		var recipient = document.getElementById('recipient');
 		var subject = document.getElementById('subject');
 		var mandrill_api_key = document.getElementById('mandrill_api_key');
@@ -145,7 +150,7 @@
 			btn.classList.add('disabled');
 
 			var request = new XMLHttpRequest();
-	    request.open('GET', saveUrl + "?recipient=" + recipient.value + "&subject=" + subject.value + "&from=" + _from.value + "&mandrill_api_key=" + mandrill_api_key.value + "&captcha=" + captcha.value, true);
+	    request.open('GET', saveUrl + "?recipient=" + recipient.value + "&subject=" + subject.value + "&from=" + _from.value + "&from_name=" + from_name.value + "&mandrill_api_key=" + mandrill_api_key.value + "&captcha=" + captcha.value, true);
 	    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 	    request.onreadystatechange = function() {
 	      if(request.readyState == 4 && request.status == 200) {
