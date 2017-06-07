@@ -10,7 +10,7 @@
 
   },
   "scripts": {
-    "postinstall" : "pwd"
+    "postinstall" : "mkdir -p ../../custom && cp custom/menu-addons.html ../../custom"
   },
   "repository": {
     "type": "git",
