@@ -3,9 +3,9 @@
     "recipient": "fabrice.labbe@adfab.fr",
     "template": "/scripts/mail/template-mail/contact.html",
     "subject": "Contact hedonic",
-    "mandrill_api_key": "ULiMIuKM1B1KPqJPcYXDHA"
+    "mandrill_api_key": ""
   },
   "captcha": {
-    "secret": "6LeCXiQUAAAAAHtQfIPDq_6DHeuoxrzaUh7KOIDV"
+    "secret": ""
   }
 }
