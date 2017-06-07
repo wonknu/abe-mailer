@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 var path = require('path');
-var config = require('../../mail');
+var config = require('../../../mail');
 
 var route = function route(req, res, next, abe) {
 
