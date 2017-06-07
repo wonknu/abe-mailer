@@ -10,7 +10,7 @@
 
   },
   "scripts": {
-    "postinstall" : "mkdir -p ../../custom && cp -n custom/menu-addons.html ../../custom && mkdir -p ../../mail && cp -n config/index.json ../../mail"
+    
   },
   "repository": {
     "type": "git",
