@@ -1,5 +1,6 @@
 {
   "mail": {
+  	"from": "no-reply@abecms.com",
     "recipient": "fabrice.labbe@adfab.fr",
     "template": "/mail/contact.html",
     "subject": "Contact hedonic",
