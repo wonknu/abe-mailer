@@ -1,0 +1,25 @@
+{
+  "name": "abe-mail",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "mandrill-api": "1.0.45",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+
+  },
+  "scripts": {
+    "postinstall" : "cp custom ../../"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wonknu/abe-mail.git"
+  },
+  "author": "wonknu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wonknu/abe-mail"
+  },
+  "homepage": "https://github.com/wonknu/abe-mail#readme"
+}
