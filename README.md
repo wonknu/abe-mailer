@@ -42,6 +42,21 @@ Click on it and you will be able to edit you mail config directly from abems edi
 
 ![Tab config](doc-image/doc-1.png)
 
+or open mail/index.json
+
+
+```
+{
+	"mail": {
+		"recipient": "fabrice.labbe@adfab.fr",
+		"template": "/scripts/mail/template-mail/contact.html",
+		"subject": "this is subject"
+	},
+	"captcha": {
+		"secret": "YOUR_RECAPTCHA_SECRET"
+	}
+}
+
 
 ####5) open mail/config/index.json
 
@@ -82,16 +97,25 @@ On your Abe template you will need to have a form element like this :
 ```
 Note the ID #gform (form tag) and the class .btn-mail (button submit tab)
 
-##Example email
+##Example template email
 
-##Advanced usage
+open mail/contact.html
 
-This repository also contains "custom" folder, copy it to your root folder.
-This will add a new tab "Mail configuration"
+```
+<table>
+	<tr>
+		<td>
+			Nom: {{name}}
+			<br>
+			email: {{email}}
+			<br>
+			phone: {{country}}
+		  	<br>
+		</td>
+	</tr>
+</table>
+```
 
-![Tab config](doc-image/doc-0.png)
+As you can see you can use variable from your html form the name of the variable must be the same as the name attribut on your html form
 
-Click on it and you will be able to edit you mail config directly from abems editor
-
-![Tab config](doc-image/doc-1.png)
-
+example name="email" can be use like this {{email}}
