@@ -47,14 +47,17 @@ or open mail/index.json and edit it
 
 ```
 {
-	"mail": {
-		"recipient": "fabrice.labbe@adfab.fr",
-		"template": "/scripts/mail/template-mail/contact.html",
-		"subject": "this is subject"
-	},
-	"captcha": {
-		"secret": "YOUR_RECAPTCHA_SECRET"
-	}
+  "mail": {
+  	"from": "no-reply@abecms.com",
+    "from_name": "Noreply Abecms",
+    "recipient": "fabrice.labbe@adfab.fr",
+    "template": "/mail/contact.html",
+    "subject": "Contact hedonic",
+    "mandrill_api_key": ""
+  },
+  "captcha": {
+    "secret": ""
+  }
 }
 ```
 
