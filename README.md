@@ -56,7 +56,7 @@ or open mail/index.json and edit it
 		"secret": "YOUR_RECAPTCHA_SECRET"
 	}
 }
-
+```
 
 ##Example form
 
