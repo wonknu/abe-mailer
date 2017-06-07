@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 var path = require('path');
-var config = require('../../config');
+var config = require('../../mail');
 
 var route = function route(req, res, next, abe) {
 
@@ -11,7 +11,7 @@ var route = function route(req, res, next, abe) {
     config.mail.mandrill_api_key = req.query.mandrill_api_key
     config.mail.subject = req.query.subject
     config.captcha.secret = req.query.captcha
-    fs.writeFile(abe.config.root + '/scripts/mail/config/index.json', JSON.stringify(config), 'utf8');
+    fs.writeFile(abe.config.root + '/mail/index.json', JSON.stringify(config), 'utf8');
     res.json({'ok': 'ok'});
     return;
   }

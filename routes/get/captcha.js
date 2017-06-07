@@ -1,7 +1,7 @@
 'use strict';
 
 var request = require("request");
-var config = require('../../config');
+var config = require('../../mail');
 
 var route = function route(req, res, next, abe) {
   abe.abeExtend.hooks.instance.trigger('beforeRoute', req, res, next);

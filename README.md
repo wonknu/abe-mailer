@@ -2,19 +2,20 @@
 
 ## Install
 
-####1) Download as zip from github and place it inside your scripts folder
-
-####2) Add this to your root package.json
+Install plugin via abecms CI
 
 ```
-"dependencies": {
-	"handlebars": "^4.0.10",
-	"sendmail": "^1.1.1"
-}
+abe install wonknu/abe-mailer
 ```
-####3) Copy mail/script/send-mail-front.js to your assets folder & link this script inside your template
+Copy javascript asset from this plugin to your frontend assets
 
-####4) edit constates inside this script to match your need
+```
+cp node_modules/abe-mailer/script/send-mail-front.js templates/index_files/src/
+```
+
+replace templates/index_files/src/ with the path to your frontend assets files
+and add a script tag on your template where there are your contact form
+inside this file you can edit basic info
 
 ```
 var CONST = {
@@ -31,6 +32,16 @@ var CONST = {
 - SUCESS_MSG: this html element will get style display = block after mail success response
 
 important: You have to handle form validation, all this script does is myForm.checkValidity() wich only check browser default validation such as required attribute or type attribute (email, number ...)
+
+This repository contains "custom" folder which copied to your root folder on postinstall 
+This will add a new tab "Mail configuration"
+
+![Tab config](doc-image/doc-0.png)
+
+Click on it and you will be able to edit you mail config directly from abems editor
+
+![Tab config](doc-image/doc-1.png)
+
 
 ####5) open mail/config/index.json
 

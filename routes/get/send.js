@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 var path = require('path');
-var config = require('../../config');
+var config = require('../../mail');
 var mandrill = require('mandrill-api/mandrill');
 var mandrill_client = new mandrill.Mandrill(config.mail.mandrill_api_key);
 
