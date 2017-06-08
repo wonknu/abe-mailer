@@ -1,23 +1,22 @@
-# Plugin mail for [abecms](https://github.com/abecms/abecms)
+# Mailer plugin for [AbeCMS](https://github.com/abecms/abecms)
 
-## Install
+## Installation
 
-Install plugin via abecms CI
+Install plugin via AbeCMS CL:
 
-```
+```bash
 abe install wonknu/abe-mailer
 ```
-Copy javascript asset from this plugin to your frontend assets
 
-```
+Copy Javascript asset from the plugin to your frontend assets:
+
+```bash
 cp node_modules/abe-mailer/script/send-mail-front.js templates/index_files/src/
 ```
 
-replace templates/index_files/src/ with the path to your frontend assets files
-and add a script tag on your template where there are your contact form
-inside this file you can edit basic info
+Then replace `templates/index_files/src/` by the path to your frontend assets files and add a script tag on your template where there are your contact form inside this file you can edit basic info:
 
-```
+```javascript
 var CONST = {
   POST_URL: 'http://localhost:3000/abe/plugin/mail/send',
   CLASS_BTN_SEND: '.btn-mail',
@@ -26,28 +25,28 @@ var CONST = {
 };
 ```
 
-- POST_URL: is your abe instance followed with this plugin path
-- CLASS_BTN_SEND: is the class name of your submit button on your html template
-- FORM_ID: is the ID of your form tag
-- SUCESS_MSG: this html element will get style display = block after mail success response
+- `POST_URL`: is your AbeCMS instance followed with this plugin path
+- `CLASS_BTN_SEND`: is the class name of your submit button on your HTML template
+- `FORM_ID`: is the ID of your form tag
+- `SUCESS_MSG`: this HTML element will get style display = block after email success response
 
-important: You have to handle form validation, all this script does is myForm.checkValidity() wich only check browser default validation such as required attribute or type attribute (email, number ...)
+**Important:** You have to handle form validation, all this script does is `myForm.checkValidity()` wich only check browser default validation such as required attribute or type attribute (email, number, etc.).
 
-This repository contains "custom" folder which copied to your root folder on postinstall 
-This will add a new tab "Mail configuration"
+This repository contains "custom" folder which copied to your root folder on postinstall.  
+This will add a new tab "Mail configuration".
 
-##Configuration
+## Configuration
 
 ![Tab config](doc-image/doc-0.png)
 
-Click on it and you will be able to edit you mail config directly from abems editor
+Click on it and you will be able to edit your email config directly from AbeCMS editor.
 
 ![Tab config](doc-image/doc-1.png)
 
-or open abe.json and add this
+or open `abe.json` and add this:
 
 
-```
+```json
 {
   "mail": {
   	"from": "no-reply@abecms.com",
@@ -70,9 +69,9 @@ or open abe.json and add this
 
 ```
 
-##Example form
+## Form example
 
-On your Abe template you will need to have a form element like this :
+On your AbeCMS template you will need to have a form element like this:
 
 ```html
 <form id="gform" action="#" method="POST">
@@ -89,27 +88,25 @@ On your Abe template you will need to have a form element like this :
 <!-- don't forget to load the script -->
 <script type="text/javascript" src="/src/send-mail-front.js"></script>
 ```
-Note the ID #gform (form tag) and the class .btn-mail (button submit tab)
 
-##Example template email
+Please note the ID `#gform` (form tag) and the class `.btn-mail` (button submit tab).
 
-open mail/contact.html
+## Email template example
+
+Open `mail/contact.html`:
 
 ```html
 <table>
-	<tr>
-		<td>
-			Nom: {{name}}
-			<br>
-			email: {{email}}
-			<br>
-			phone: {{country}}
-		  	<br>
-		</td>
-	</tr>
+    <tr>
+        <td>
+            Nom: {{name}}<br>
+            email: {{email}}<br>
+            phone: {{country}}<br>
+        </td>
+    </tr>
 </table>
 ```
 
-As you can see you can use variable from your html form the name of the variable must be the same as the name attribut on your html form
+As you can see you can use variable from your HTML form the name of the variable must be the same as the name attribut on your HTML form.
 
-example name="email" can be use like this {{email}}
+Example `name="email"` can be use like this `{{email}}`.
