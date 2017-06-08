@@ -124,7 +124,6 @@
 	<script>
 		var btn = document.getElementById('save');
     var _from = document.getElementById('from');
-    var from_name = document.getElementById('from_name');
 		var recipient = document.getElementById('recipient');
 		var subject = document.getElementById('subject');
 		var mandrill_api_key = document.getElementById('mandrill_api_key');
@@ -146,7 +145,7 @@
 			btn.classList.add('disabled');
 
 			var request = new XMLHttpRequest();
-	    request.open('GET', saveUrl + "?recipient=" + recipient.value + "&subject=" + subject.value + "&from=" + _from.value + "&from_name=" + from_name.value + "&mandrill_api_key=" + mandrill_api_key.value + "&captcha=" + captcha.value, true);
+	    request.open('GET', saveUrl + "?recipient=" + recipient.value + "&subject=" + subject.value + "&from=" + _from.value + "&mandrill_api_key=" + mandrill_api_key.value + "&captcha=" + captcha.value, true);
 	    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 	    request.onreadystatechange = function() {
 	      if(request.readyState == 4 && request.status == 200) {
