@@ -36,29 +36,38 @@ important: You have to handle form validation, all this script does is myForm.ch
 This repository contains "custom" folder which copied to your root folder on postinstall 
 This will add a new tab "Mail configuration"
 
+##Configuration
+
 ![Tab config](doc-image/doc-0.png)
 
 Click on it and you will be able to edit you mail config directly from abems editor
 
 ![Tab config](doc-image/doc-1.png)
 
-or open mail/index.json and edit it
+or open abe.json and add this
 
 
 ```
 {
   "mail": {
   	"from": "no-reply@abecms.com",
-    "from_name": "Noreply Abecms",
     "recipient": "fabrice.labbe@adfab.fr",
     "template": "/mail/contact.html",
-    "subject": "Contact hedonic",
-    "mandrill_api_key": ""
+    "subject": "Contact hedonic"
   },
   "captcha": {
     "secret": ""
   }
+},
+"smtp": {
+  "service": "mandrill",
+  "options": {
+    "auth": {
+      "apiKey": "YOUR_API_KEY"
+    }
+  }
 }
+
 ```
 
 ##Example form
