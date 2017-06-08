@@ -4,27 +4,21 @@ var fs = require('fs');
 var path = require('path');
 
 var route = function route(req, res, next, abe) {
-
-  var config = require(abe.config.root + '/mail/index.json');
-
   if(req.query.recipient != null){
-    config.mail.from = req.query.from;
-    config.mail.from_name = req.query.from_name;
-    config.mail.recipient = req.query.recipient;
-    config.mail.mandrill_api_key = req.query.mandrill_api_key;
-    config.mail.subject = req.query.subject;
-    config.captcha.secret = req.query.captcha;
-    fs.writeFile(abe.config.root + '/mail/index.json', JSON.stringify(config), 'utf8');
+    abe.config.mail.from = req.query.from;
+    abe.config.mail.recipient = req.query.recipient;
+    abe.config.smtp.options.auth.apiKey = req.query.mandrill_api_key;
+    abe.config.mail.subject = req.query.subject;
+    abe.config.captcha.secret = req.query.captcha;
+    fs.writeFile(abe.config.root + '/abe.json', JSON.stringify(abe.config), 'utf8');
     res.json({'ok': 'ok'});
     return;
   }
 
   var data = path.join(__dirname + '/../../partials/configuration.html')
   var html = abe.coreUtils.file.getContent(data);
-
   var template = abe.Handlebars.compile(html, {noEscape: true})
   var tmp = template({
-    configMail: config,
     manager: {config: JSON.stringify(abe.config)},
     config: abe.config,
     user: res.user,

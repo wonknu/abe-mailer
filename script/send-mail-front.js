@@ -1,5 +1,5 @@
 var CONST = {
-  POST_URL: 'http://localhost:3000/abe/plugin/mail/',
+  POST_URL: 'http://localhost:3000/abe/plugin/abe-mailer/',
   CLASS_BTN_SEND: '.btn-mail',
   FORM_ID: 'gform-el',
   SUCESS_MSG: '.sucess-mg'

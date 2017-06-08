@@ -77,23 +77,19 @@
                 <div class="manager-tab-content">
 	                <div class="input-group">
                 		<div class="label-input">Mandrill api key</div>
-                  	<input type="text" name="mandrill_api_key" id="mandrill_api_key" value="{{configMail.mail.mandrill_api_key}}" class="form-control form-edit">
+                  	<input type="text" name="mandrill_api_key" id="mandrill_api_key" value="{{@root.config.smtp.options.auth.apiKey}}" class="form-control form-edit">
 	                </div>
                   <div class="input-group">
                     <div class="label-input">From email</div>
-                    <input type="email" name="from" id="from" value="{{configMail.mail.from}}" class="form-control form-edit">
-                  </div>
-                  <div class="input-group">
-                    <div class="label-input">From name</div>
-                    <input type="email" name="from" id="from" value="{{configMail.mail.from_name}}" class="form-control form-edit">
+                    <input type="email" name="from" id="from" value="{{@root.config.mail.from}}" class="form-control form-edit">
                   </div>
 	                <div class="input-group">
                 		<div class="label-input">Recipient</div>
-                  	<input type="email" name="recipient" id="recipient" value="{{configMail.mail.recipient}}" class="form-control form-edit">
+                  	<input type="email" name="recipient" id="recipient" value="{{@root.config.mail.recipient}}" class="form-control form-edit">
 	                </div>
 	                <div class="input-group">
                 		<div class="label-input">Email subject</div>
-                  	<input type="text" name="subject" id="subject" value="{{configMail.mail.subject}}" class="form-control form-edit">
+                  	<input type="text" name="subject" id="subject" value="{{@root.config.mail.subject}}" class="form-control form-edit">
 	                </div>
 								</div>
 								<hr>
@@ -103,7 +99,7 @@
                 <div class="manager-tab-content">
 	                <div class="input-group">
                 		<div class="label-input">ReCaptcha secret</div>
-                  	<input type="text" name="captcha" id="captcha" value="{{configMail.captcha.secret}}" class="form-control form-edit">
+                  	<input type="text" name="captcha" id="captcha" value="{{@root.config.captcha.secret}}" class="form-control form-edit">
                   </div>
                   <br>
 			            <button class="btn btn-info" id="save" >

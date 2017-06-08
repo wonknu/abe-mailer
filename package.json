@@ -3,14 +3,11 @@
   "version": "1.0.0",
   "description": "abe plugin to send mail",
   "dependencies": {
-    "mandrill-api": "1.0.45",
     "request": "^2.81.0"
   },
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "scripts": {
-    "postinstall" : "mkdir -p ../../custom && cp -n custom/menu-addons.html ../../custom && mkdir -p ../../mail && cp -n config/index.json ../../mail && cp -n template-mail/contact.html ../../mail"
+    "postinstall" : "mkdir -p ../../custom && cp -n custom/menu-addons.html ../../custom && mkdir -p ../../mail && cp -n template-mail/contact.html ../../mail"
   },
   "repository": {
     "type": "git",
