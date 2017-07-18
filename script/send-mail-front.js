@@ -48,7 +48,7 @@ function serialize(form) {
 
   btnMail.addEventListener('click', function (e) {
     e.preventDefault();
-    if(!document.getElementById(CONST.FORM_ID).checkValidity()) return;
+    if(!e.target.checkValidity()) return;
 
     if(captchaResponse != null){
       var request_captcha = new XMLHttpRequest();
