@@ -30,7 +30,6 @@ function serialize(form) {
   var form = document.getElementById(CONST.FORM_ID);
   var sucessMessage = document.querySelector(CONST.SUCESS_MSG);
   var btnMail = document.querySelector(CONST.CLASS_BTN_SEND);
-  var captchaResponse = document.getElementById("g-recaptcha-response");
   sucessMessage.style.display = 'none';
 
   var submitForm = function submitForm() {
@@ -47,6 +46,7 @@ function serialize(form) {
   }
 
   btnMail.addEventListener('click', function (e) {
+    var captchaResponse = document.getElementById("g-recaptcha-response");
     e.preventDefault();
     if(!e.target.checkValidity()) return;
 
