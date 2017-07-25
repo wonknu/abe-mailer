@@ -7,7 +7,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "postinstall" : "mkdir -p ../../custom && cp -n custom/menu-addons.html ../../custom && mkdir -p ../../mail && cp -n template-mail/contact.html ../../mail"
+    "postinstall" : "mkdir -p ../../mail && cp -n template-mail/contact.html ../../mail"
   },
   "repository": {
     "type": "git",
